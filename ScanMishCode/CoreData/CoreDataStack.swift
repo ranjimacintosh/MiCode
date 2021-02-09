@@ -18,12 +18,6 @@ class CoreDataStack: NSObject {
     
     // MARK: - Core Data stack
     lazy var persistentContainer: NSPersistentContainer = {
-        /*
-         The persistent container for the application. This implementation
-         creates and returns a container, having loaded the store for the
-         application to it. This property is optional since there are legitimate
-         error conditions that could cause the creation of the store to fail.
-         */
         let container = NSPersistentContainer(name: "ScanMishCode")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
@@ -52,8 +46,6 @@ class CoreDataStack: NSObject {
             do {
                 try context.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
@@ -100,33 +92,22 @@ class CoreDataStack: NSObject {
         //Now let’s create an entity and new user records.
         let userEntity = NSEntityDescription.entity(forEntityName: "Cart", in: managedContext)!
         
-        //final, we need to add some data to our newly created record for each keys using
-        //here adding 5 data with loop
-        
             let user = NSManagedObject(entity: userEntity, insertInto: managedContext)
             user.setValue(data, forKeyPath: "productName")
 
-        //Now we have set all the values. The next step is to save them inside the Core Data
-        
         do {
             try managedContext.save()
            
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
-        
     }
-
-    
 }
-
-
 
 @available(iOS 13.0, *)
 extension CoreDataStack {
     
     func applicationDocumentsDirectory() {
-        // The directory the application uses to store the Core Data store file. This code uses a directory named "yo.BlogReaderApp" in the application's documents directory.
         if let url = FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask).last {
             print(url.absoluteString)
         }

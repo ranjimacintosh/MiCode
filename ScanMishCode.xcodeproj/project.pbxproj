@@ -23,6 +23,9 @@
 		525B20BB25D17C0D004B1A58 /* Cart+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B20B925D17C0D004B1A58 /* Cart+CoreDataProperties.swift */; };
 		525B20BD25D17FC8004B1A58 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B20BC25D17FC7004B1A58 /* CoreDataStack.swift */; };
 		525B20C425D19A1D004B1A58 /* InvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B20C325D19A1D004B1A58 /* InvoiceViewController.swift */; };
+		525B20C625D1B34C004B1A58 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B20C525D1B34C004B1A58 /* CartViewModel.swift */; };
+		525B20C925D1B94E004B1A58 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B20C825D1B94E004B1A58 /* CustomTableViewCell.swift */; };
+		525B20CD25D1BE60004B1A58 /* InvoiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B20CC25D1BE5F004B1A58 /* InvoiceViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,9 @@
 		525B20B925D17C0D004B1A58 /* Cart+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cart+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		525B20BC25D17FC7004B1A58 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		525B20C325D19A1D004B1A58 /* InvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceViewController.swift; sourceTree = "<group>"; };
+		525B20C525D1B34C004B1A58 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		525B20C825D1B94E004B1A58 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		525B20CC25D1BE5F004B1A58 /* InvoiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +101,6 @@
 		525B207325D171B3004B1A58 = {
 			isa = PBXGroup;
 			children = (
-				525B20C225D19715004B1A58 /* Model */,
 				525B207E25D171B3004B1A58 /* ScanMishCode */,
 				525B209825D171B8004B1A58 /* ScanMishCodeTests */,
 				525B20A325D171B9004B1A58 /* ScanMishCodeUITests */,
@@ -117,9 +122,11 @@
 			isa = PBXGroup;
 			children = (
 				525B20C025D196F8004B1A58 /* Delegate */,
-				525B20C125D19706004B1A58 /* CoreData */,
 				525B20BF25D196EB004B1A58 /* Constants */,
-				525B20BE25D196D2004B1A58 /* Controllers */,
+				525B20C125D19706004B1A58 /* CoreData */,
+				525B20C725D1B8BD004B1A58 /* ViewModel */,
+				525B20C225D19715004B1A58 /* Model */,
+				525B20CA25D1BAD8004B1A58 /* View */,
 				525B208525D171B3004B1A58 /* Main.storyboard */,
 				525B208B25D171B8004B1A58 /* Assets.xcassets */,
 				525B208D25D171B8004B1A58 /* LaunchScreen.storyboard */,
@@ -156,6 +163,7 @@
 				525B20C325D19A1D004B1A58 /* InvoiceViewController.swift */,
 			);
 			name = Controllers;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		525B20BF25D196EB004B1A58 /* Constants */ = {
@@ -190,6 +198,32 @@
 				525B20B825D17C0D004B1A58 /* Cart+CoreDataClass.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		525B20C725D1B8BD004B1A58 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				525B20C525D1B34C004B1A58 /* CartViewModel.swift */,
+				525B20CC25D1BE5F004B1A58 /* InvoiceViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		525B20CA25D1BAD8004B1A58 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				525B20BE25D196D2004B1A58 /* Controllers */,
+				525B20CB25D1BAFB004B1A58 /* TableViewCells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		525B20CB25D1BAFB004B1A58 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				525B20C825D1B94E004B1A58 /* CustomTableViewCell.swift */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,9 +365,12 @@
 				525B208A25D171B3004B1A58 /* ScanMishCode.xcdatamodeld in Sources */,
 				525B20BD25D17FC8004B1A58 /* CoreDataStack.swift in Sources */,
 				525B20BB25D17C0D004B1A58 /* Cart+CoreDataProperties.swift in Sources */,
+				525B20C625D1B34C004B1A58 /* CartViewModel.swift in Sources */,
 				525B20B725D17BB8004B1A58 /* Constants.swift in Sources */,
+				525B20CD25D1BE60004B1A58 /* InvoiceViewModel.swift in Sources */,
 				525B20B525D17B5A004B1A58 /* CartViewController.swift in Sources */,
 				525B208225D171B3004B1A58 /* SceneDelegate.swift in Sources */,
+				525B20C925D1B94E004B1A58 /* CustomTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

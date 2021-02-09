@@ -37,9 +37,9 @@
                                     <constraint firstAttribute="height" constant="49" id="xX1-c5-fnP"/>
                                 </constraints>
                                 <items>
-                                    <tabBarItem tag="1" title="Scan" selectedImage="paperplane.fill" catalog="system" id="sWL-0k-mOy"/>
-                                    <tabBarItem tag="2" title="Cart" id="veF-oS-ndb"/>
-                                    <tabBarItem tag="3" title="Invoice" id="2dC-nD-9o8"/>
+                                    <tabBarItem tag="1" title="Scan" image="discover 1" selectedImage="discover 1" id="sWL-0k-mOy"/>
+                                    <tabBarItem tag="2" title="Cart" image="profile 1" selectedImage="profile 1" id="veF-oS-ndb"/>
+                                    <tabBarItem tag="3" title="Invoice" image="notes 1" selectedImage="notes 1" id="2dC-nD-9o8"/>
                                 </items>
                                 <connections>
                                     <outlet property="delegate" destination="EQJ-ir-WyT" id="5uk-BT-yEN"/>
@@ -153,8 +153,21 @@
                                     <outlet property="delegate" destination="mHm-SP-47n" id="2l3-oo-7ia"/>
                                 </connections>
                             </tableView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ApO-B5-Vht">
+                                <rect key="frame" x="336" y="68" width="58" height="22"/>
+                                <state key="normal" title="Back" image="arrowRight"/>
+                                <connections>
+                                    <action selector="backAction:" destination="mHm-SP-47n" eventType="touchUpInside" id="yR2-rJ-Hdb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EwY-v3-ZHW">
+                                <rect key="frame" x="185" y="62" width="34" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxg-ZE-NpW">
-                                <rect key="frame" x="26" y="69" width="58" height="22"/>
+                                <rect key="frame" x="30" y="67" width="58" height="22"/>
                                 <state key="normal" title="Back" image="arrowRight"/>
                                 <connections>
                                     <action selector="backAction:" destination="mHm-SP-47n" eventType="touchUpInside" id="NV9-Qi-3oC"/>
@@ -163,12 +176,17 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="nEx-Sj-d3h" firstAttribute="centerX" secondItem="2Zn-RY-1q2" secondAttribute="centerX" id="1f5-ZU-aF8"/>
-                            <constraint firstItem="nEx-Sj-d3h" firstAttribute="top" secondItem="dxg-ZE-NpW" secondAttribute="bottom" constant="11" id="7wf-M1-zS0"/>
-                            <constraint firstItem="qAW-vb-kZR" firstAttribute="bottom" secondItem="nEx-Sj-d3h" secondAttribute="bottom" constant="27" id="8LC-MQ-Nr5"/>
-                            <constraint firstItem="dxg-ZE-NpW" firstAttribute="top" secondItem="qAW-vb-kZR" secondAttribute="top" constant="25" id="JnG-ST-GrR"/>
-                            <constraint firstItem="dxg-ZE-NpW" firstAttribute="leading" secondItem="qAW-vb-kZR" secondAttribute="leading" constant="26" id="TQn-Va-stT"/>
-                            <constraint firstItem="nEx-Sj-d3h" firstAttribute="leading" secondItem="qAW-vb-kZR" secondAttribute="leading" id="nha-m6-9eC"/>
+                            <constraint firstItem="nEx-Sj-d3h" firstAttribute="centerX" secondItem="2Zn-RY-1q2" secondAttribute="centerX" id="0up-ie-Kst"/>
+                            <constraint firstItem="ApO-B5-Vht" firstAttribute="top" secondItem="qAW-vb-kZR" secondAttribute="top" constant="24" id="ECt-wW-xd3"/>
+                            <constraint firstItem="EwY-v3-ZHW" firstAttribute="leading" secondItem="dxg-ZE-NpW" secondAttribute="trailing" constant="97" id="Gkk-CK-a0s"/>
+                            <constraint firstItem="dxg-ZE-NpW" firstAttribute="leading" secondItem="qAW-vb-kZR" secondAttribute="leading" constant="30" id="H25-l4-DVY"/>
+                            <constraint firstItem="EwY-v3-ZHW" firstAttribute="top" secondItem="qAW-vb-kZR" secondAttribute="top" constant="18" id="NuT-iM-fH5"/>
+                            <constraint firstItem="ApO-B5-Vht" firstAttribute="trailing" secondItem="2Zn-RY-1q2" secondAttribute="trailingMargin" id="On1-uG-Nrv"/>
+                            <constraint firstItem="qAW-vb-kZR" firstAttribute="bottom" secondItem="nEx-Sj-d3h" secondAttribute="bottom" constant="27" id="dhl-le-b85"/>
+                            <constraint firstItem="dxg-ZE-NpW" firstAttribute="centerY" secondItem="EwY-v3-ZHW" secondAttribute="centerY" id="ee5-K9-4Ml"/>
+                            <constraint firstItem="dxg-ZE-NpW" firstAttribute="top" secondItem="qAW-vb-kZR" secondAttribute="top" constant="23" id="iXU-un-a5T"/>
+                            <constraint firstItem="nEx-Sj-d3h" firstAttribute="top" secondItem="EwY-v3-ZHW" secondAttribute="bottom" constant="8" id="omN-x9-gVz"/>
+                            <constraint firstItem="nEx-Sj-d3h" firstAttribute="leading" secondItem="qAW-vb-kZR" secondAttribute="leading" id="vlX-Mq-Eag"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qAW-vb-kZR"/>
                     </view>
@@ -224,7 +242,9 @@
     <resources>
         <image name="arrowRight" width="18" height="14"/>
         <image name="cross" width="40" height="40"/>
+        <image name="discover 1" width="19" height="20"/>
         <image name="focus" width="150" height="150"/>
-        <image name="paperplane.fill" catalog="system" width="128" height="121"/>
+        <image name="notes 1" width="25" height="18"/>
+        <image name="profile 1" width="19" height="22"/>
     </resources>
 </document>

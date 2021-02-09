@@ -13,7 +13,8 @@ import CoreData
 class CartViewController: UIViewController {
     
 @IBOutlet weak var tableView: UITableView!
-    
+   
+private var viewModel = CartViewModel()
 var cartDataMod = [NSManagedObject]()
 var objectContext: NSManagedObjectContext! = nil
 var entity: NSEntityDescription! = nil
@@ -32,7 +33,8 @@ override func viewWillAppear(_ animated: Bool) {
 //        objectContext = appDelegate.persistentContainer.viewContext
 //        entity = NSEntityDescription.entity(forEntityName: Constants.entityName, in: objectContext)!
         
-        self.retrieveData()
+        viewModel.getCartData()
+        self.cartDataMod = viewModel.cartDataMod
     }
     
     @IBAction func backAction(_ sender: Any) {
@@ -82,11 +84,11 @@ extension CartViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if (editingStyle == .delete) {
-            let task = cartDataMod[indexPath.row]
-            cartDataMod.remove(at: indexPath.row)
-            objectContext.delete(task)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        }
+        //if (editingStyle == .delete) {
+        //    let task = cartDataMod[indexPath.row]
+            //cartDataMod.remove(at: indexPath.row)
+            //CoreDataStack.sharedInstance.persistentContainer.viewContext.delete(task)
+        //    tableView.deleteRows(at: [indexPath], with: .fade)
+        //}
     }
 }
